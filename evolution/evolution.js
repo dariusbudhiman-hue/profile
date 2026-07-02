@@ -133,7 +133,7 @@ function openPopup(speciesKey){
 
     popup.style.display = "flex";
 
-    },
+    }
 
     "homo-habilis": {
 
