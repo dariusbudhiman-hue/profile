@@ -1,0 +1,899 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Human Evolution | Darius Ivan Budhiman</title>
+
+    <meta name="description"
+        content="Website interaktif mengenai evolusi manusia dari Australopithecus hingga Homo sapiens.">
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" href="evolution.css">
+
+</head>
+
+<body>
+
+<canvas id="particleCanvas"></canvas>
+
+<!-- ==========================
+        NAVBAR
+=========================== -->
+
+<header>
+
+    <nav>
+
+        <div class="logo">
+
+            <i class="fa-solid fa-dna glow"></i>
+
+            <span>Human Evolution</span>
+
+        </div>
+
+        <ul>
+
+            <li>
+                <a href="#hero">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#timeline">
+                    Timeline
+                </a>
+            </li>
+
+            <li>
+                <a href="#species">
+                    Spesies
+                </a>
+            </li>
+
+            <li>
+                <a href="#statistics">
+                    Statistik
+                </a>
+            </li>
+
+            <li>
+                <a href="#table">
+                    Data
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ==========================
+        HERO
+=========================== -->
+
+<section id="hero">
+
+    <div class="hero-text">
+
+        <h1>
+
+            Jelajahi
+
+            <span class="glow">
+                Evolusi Manusia
+            </span>
+
+            Dari Masa ke Masa
+
+        </h1>
+
+        <p>
+
+            Perjalanan evolusi manusia dimulai jutaan tahun yang lalu,
+            dari hominin awal di Afrika hingga munculnya
+            <strong>Homo sapiens</strong> sebagai satu-satunya spesies
+            manusia yang bertahan hidup sampai saat ini.
+
+        </p>
+
+        <div class="hero-button">
+
+            <a href="#species" class="btn">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                Jelajahi Spesies
+
+            </a>
+
+            <a href="#timeline" class="btn">
+
+                <i class="fa-solid fa-clock-rotate-left"></i>
+
+                Lihat Timeline
+
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-image">
+
+        <img
+            src="images/dna.png"
+            alt="DNA Illustration"
+            class="float">
+
+    </div>
+
+</section>
+
+<!-- ==========================
+      STATISTIK
+=========================== -->
+
+<section id="statistics">
+
+    <h2>
+
+        Statistik Evolusi
+
+    </h2>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-skull"></i>
+
+            <h3 id="speciesCount">
+
+                0
+
+            </h3>
+
+            <p>
+
+                Spesies
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-earth-africa"></i>
+
+            <h3 id="continentCount">
+
+                0
+
+            </h3>
+
+            <p>
+
+                Wilayah Penemuan
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-hourglass-half"></i>
+
+            <h3 id="yearCount">
+
+                0
+
+            </h3>
+
+            <p>
+
+                Juta Tahun Evolusi
+
+            </p>
+
+        </div>
+
+        <div class="stat-card">
+
+            <i class="fa-solid fa-user"></i>
+
+            <h3 id="aliveCount">
+
+                1
+
+            </h3>
+
+            <p>
+
+                Spesies yang Masih Hidup
+
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+      SEARCH
+=========================== -->
+
+<section class="search-section">
+
+    <h2>
+
+        Cari Spesies
+
+    </h2>
+
+    <div class="search-box">
+
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <input
+
+            type="text"
+
+            id="search"
+
+            placeholder="Contoh: Homo erectus"
+
+        >
+
+    </div>
+
+    <div class="filter-box">
+
+        <select id="filter">
+
+            <option value="all">
+
+                Semua Genus
+
+            </option>
+
+            <option value="Homo">
+
+                Homo
+
+            </option>
+
+            <option value="Australopithecus">
+
+                Australopithecus
+
+            </option>
+
+        </select>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+      TIMELINE
+=========================== -->
+
+<section id="timeline">
+
+    <h2>
+
+        Timeline Evolusi Manusia
+
+    </h2>
+
+    <div class="timeline">
+
+        <div class="timeline-item reveal">
+
+            <div class="circle"></div>
+
+            <div class="content">
+
+                <h3>
+
+                    Australopithecus
+
+                </h3>
+
+                <p>
+
+                    ± 4 Juta Tahun Lalu
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item reveal">
+
+            <div class="circle"></div>
+
+            <div class="content">
+
+                <h3>
+
+                    Homo habilis
+
+                </h3>
+
+                <p>
+
+                    ± 2,4 Juta Tahun Lalu
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item reveal">
+
+            <div class="circle"></div>
+
+            <div class="content">
+
+                <h3>
+
+                    Homo erectus
+
+                </h3>
+
+                <p>
+
+                    ± 1,9 Juta Tahun Lalu
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item reveal">
+
+            <div class="circle"></div>
+
+            <div class="content">
+
+                <h3>
+
+                    Homo neanderthalensis
+
+                </h3>
+
+                <p>
+
+                    ± 400 Ribu Tahun Lalu
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="timeline-item reveal">
+
+            <div class="circle"></div>
+
+            <div class="content">
+
+                <h3>
+
+                    Homo sapiens
+
+                </h3>
+
+                <p>
+
+                    ± 300 Ribu Tahun Lalu
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+   BAGIAN 2 DIMULAI DARI SINI
+   (Species Cards)
+=========================== -->
+```
+```html
+<section id="species">
+
+    <h2>Daftar Spesies</h2>
+
+    <div class="cards">
+
+        <!-- ========================= -->
+        <!-- Australopithecus afarensis -->
+        <!-- ========================= -->
+
+        <div class="card reveal"
+            data-species="australopithecus-afarensis"
+            data-type="Australopithecus">
+
+            <img src="images/lucy.jpg"
+                alt="Australopithecus afarensis">
+
+            <div class="card-content">
+
+                <h3>Australopithecus afarensis</h3>
+
+                <span class="badge">
+                    ± 3,9 – 2,9 Juta Tahun
+                </span>
+
+                <p>
+
+                    Dikenal melalui fosil "Lucy".
+                    Sudah mampu berjalan tegak tetapi
+                    masih memiliki kemampuan memanjat pohon.
+
+                </p>
+
+                <button class="detail-btn">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Lihat Detail
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Homo habilis -->
+        <!-- ========================= -->
+
+        <div class="card reveal"
+            data-species="homo-habilis"
+            data-type="Homo">
+
+            <img src="images/habilis.jpg"
+                alt="Homo habilis">
+
+            <div class="card-content">
+
+                <h3>Homo habilis</h3>
+
+                <span class="badge">
+
+                    ± 2,4 – 1,4 Juta Tahun
+
+                </span>
+
+                <p>
+
+                    Salah satu anggota awal genus Homo
+                    yang mulai menggunakan alat batu
+                    sederhana untuk bertahan hidup.
+
+                </p>
+
+                <button class="detail-btn">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Lihat Detail
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Homo erectus -->
+        <!-- ========================= -->
+
+        <div class="card reveal"
+            data-species="homo-erectus"
+            data-type="Homo">
+
+            <img src="images/erectus.jpg"
+                alt="Homo erectus">
+
+            <div class="card-content">
+
+                <h3>Homo erectus</h3>
+
+                <span class="badge">
+
+                    ± 1,9 Juta – 110 Ribu Tahun
+
+                </span>
+
+                <p>
+
+                    Spesies pertama yang diketahui
+                    menguasai api dan bermigrasi keluar
+                    dari Afrika menuju Asia dan Eropa.
+
+                </p>
+
+                <button class="detail-btn">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Lihat Detail
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Homo neanderthalensis -->
+        <!-- ========================= -->
+
+        <div class="card reveal"
+            data-species="homo-neanderthalensis"
+            data-type="Homo">
+
+            <img src="images/neanderthal.jpg"
+                alt="Homo neanderthalensis">
+
+            <div class="card-content">
+
+                <h3>Homo neanderthalensis</h3>
+
+                <span class="badge">
+
+                    ± 400.000 – 40.000 Tahun
+
+                </span>
+
+                <p>
+
+                    Kerabat dekat manusia modern
+                    yang hidup di Eropa dan Asia
+                    dengan tubuh lebih kekar.
+
+                </p>
+
+                <button class="detail-btn">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Lihat Detail
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Homo floresiensis -->
+        <!-- ========================= -->
+
+        <div class="card reveal"
+            data-species="homo-floresiensis"
+            data-type="Homo">
+
+            <img src="images/floresiensis.jpg"
+                alt="Homo floresiensis">
+
+            <div class="card-content">
+
+                <h3>Homo floresiensis</h3>
+
+                <span class="badge">
+
+                    ± 100.000 – 50.000 Tahun
+
+                </span>
+
+                <p>
+
+                    Dijuluki "Hobbit" karena
+                    tinggi tubuhnya sekitar satu meter.
+                    Ditemukan di Pulau Flores, Indonesia.
+
+                </p>
+
+                <button class="detail-btn">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Lihat Detail
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- ========================= -->
+        <!-- Homo sapiens -->
+        <!-- ========================= -->
+
+        <div class="card reveal"
+            data-species="homo-sapiens"
+            data-type="Homo">
+
+            <img src="images/sapiens.jpg"
+                alt="Homo sapiens">
+
+            <div class="card-content">
+
+                <h3>Homo sapiens</h3>
+
+                <span class="badge">
+
+                    ± 300.000 Tahun – Sekarang
+
+                </span>
+
+                <p>
+
+                    Satu-satunya spesies manusia
+                    yang masih hidup hingga saat ini.
+                    Memiliki bahasa, budaya,
+                    dan teknologi yang kompleks.
+
+                </p>
+
+                <button class="detail-btn">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    Lihat Detail
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+   BAGIAN 2B DIMULAI DARI SINI
+=========================== -->
+```
+```html
+<!-- ==========================
+      TABEL DATA
+=========================== -->
+
+<section id="table">
+
+    <h2>Data Evolusi Manusia</h2>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+
+                    <th>Nama Spesies</th>
+                    <th>Perkiraan Usia</th>
+                    <th>Lokasi Penemuan</th>
+                    <th>Karakteristik</th>
+                    <th>Perilaku</th>
+                    <th>Hubungan Evolusi</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+                <tr>
+
+                    <td>Australopithecus afarensis</td>
+
+                    <td>3,85 – 2,95 juta tahun</td>
+
+                    <td>Afrika Timur</td>
+
+                    <td>Bipedal, lengan panjang, wajah menonjol</td>
+
+                    <td>Berjalan tegak dan memanjat pohon</td>
+
+                    <td>Nenek moyang awal manusia</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Homo habilis</td>
+
+                    <td>2,4 – 1,4 juta tahun</td>
+
+                    <td>Afrika Timur</td>
+
+                    <td>Otak lebih besar, wajah lebih datar</td>
+
+                    <td>Membuat alat batu sederhana</td>
+
+                    <td>Awal genus Homo</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Homo erectus</td>
+
+                    <td>1,9 juta – 110 ribu tahun</td>
+
+                    <td>Afrika, Asia, Eropa</td>
+
+                    <td>Postur modern, kaki panjang</td>
+
+                    <td>Menggunakan api dan kapak batu</td>
+
+                    <td>Nenek moyang Homo sapiens</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Homo neanderthalensis</td>
+
+                    <td>400.000 – 40.000 tahun</td>
+
+                    <td>Eropa dan Asia</td>
+
+                    <td>Tubuh kekar, otak besar</td>
+
+                    <td>Penguburan, alat Mousterian</td>
+
+                    <td>Kerabat dekat Homo sapiens</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Homo floresiensis</td>
+
+                    <td>100.000 – 50.000 tahun</td>
+
+                    <td>Flores, Indonesia</td>
+
+                    <td>Tinggi ±1 meter, otak kecil</td>
+
+                    <td>Membuat alat batu dan berburu</td>
+
+                    <td>Diduga turunan Homo erectus</td>
+
+                </tr>
+
+                <tr>
+
+                    <td>Homo sapiens</td>
+
+                    <td>300.000 tahun – sekarang</td>
+
+                    <td>Berasal dari Afrika, kini di seluruh dunia</td>
+
+                    <td>Otak besar, tengkorak bulat</td>
+
+                    <td>Bahasa, seni, simbolisme, teknologi</td>
+
+                    <td>Manusia modern</td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- ==========================
+      POPUP DETAIL
+=========================== -->
+
+<div class="popup" id="popup">
+
+    <div class="popup-content">
+
+        <span class="close">&times;</span>
+
+        <div id="popup-body">
+
+            <!-- Akan diisi oleh evolution.js -->
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- ==========================
+      BACK TO TOP
+=========================== -->
+
+<button id="topBtn">
+
+    <i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<!-- ==========================
+      FOOTER
+=========================== -->
+
+<footer>
+
+    <h3>
+
+        <i class="fa-solid fa-dna"></i>
+
+        Human Evolution
+
+    </h3>
+
+    <p>
+
+        Website edukasi interaktif mengenai evolusi manusia,
+        disusun berdasarkan referensi ilmiah untuk tujuan pembelajaran.
+
+    </p>
+
+    <br>
+
+    <p>
+
+        © 2026 Darius Ivan Budhiman
+
+    </p>
+
+</footer>
+
+<!-- ==========================
+      JAVASCRIPT
+=========================== -->
+
+<script src="evolution.js"></script>
+
+</body>
+
+</html>
+```
