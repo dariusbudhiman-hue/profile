@@ -1,0 +1,358 @@
+/* ===========================
+   Google Font
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* ===========================
+   Reset
+=========================== */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#07121f;
+    color:#ffffff;
+    line-height:1.8;
+}
+
+/* ===========================
+   Background Animasi
+=========================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(0,255,255,.15),transparent 25%),
+    radial-gradient(circle at 80% 30%,rgba(0,128,255,.12),transparent 25%),
+    radial-gradient(circle at 50% 80%,rgba(0,255,200,.10),transparent 25%);
+    animation:bgMove 15s infinite alternate;
+    z-index:-2;
+}
+
+@keyframes bgMove{
+
+0%{
+transform:scale(1);
+}
+
+100%{
+transform:scale(1.3);
+}
+
+}
+
+/* ===========================
+   Header
+=========================== */
+
+header{
+
+text-align:center;
+padding:80px 20px;
+background:linear-gradient(135deg,#071f38,#0b3d60,#102d45);
+
+box-shadow:0 5px 25px rgba(0,255,255,.2);
+
+}
+
+header h1{
+
+font-size:3.5rem;
+color:#6ee7ff;
+text-shadow:0 0 20px cyan;
+
+}
+
+header p{
+
+margin-top:10px;
+font-size:1.2rem;
+color:#d6f7ff;
+
+}
+
+/* ===========================
+   Navigation
+=========================== */
+
+nav{
+
+margin-top:40px;
+
+}
+
+nav ul{
+
+display:flex;
+justify-content:center;
+gap:40px;
+list-style:none;
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+text-decoration:none;
+color:white;
+padding:12px 22px;
+border:2px solid cyan;
+border-radius:40px;
+transition:.35s;
+
+}
+
+nav a:hover{
+
+background:cyan;
+color:#07121f;
+box-shadow:0 0 20px cyan;
+
+}
+
+/* ===========================
+   Section
+=========================== */
+
+section{
+
+width:min(1100px,90%);
+margin:70px auto;
+padding:40px;
+background:rgba(255,255,255,.05);
+backdrop-filter:blur(18px);
+border-radius:20px;
+border:1px solid rgba(255,255,255,.1);
+
+animation:fadeUp 1s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(50px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+section h2{
+
+font-size:2rem;
+margin-bottom:25px;
+color:#64f2ff;
+border-left:5px solid cyan;
+padding-left:15px;
+
+}
+
+/* ===========================
+   Foto Profil
+=========================== */
+
+img{
+
+display:block;
+margin:auto;
+width:220px;
+height:220px;
+object-fit:cover;
+border-radius:50%;
+border:5px solid cyan;
+box-shadow:0 0 35px cyan;
+transition:.5s;
+
+}
+
+img:hover{
+
+transform:scale(1.08) rotate(2deg);
+
+}
+
+/* ===========================
+   List
+=========================== */
+
+ul{
+
+margin-top:20px;
+margin-left:25px;
+
+}
+
+li{
+
+margin-bottom:10px;
+
+}
+
+/* ===========================
+   Portofolio
+=========================== */
+
+article{
+
+background:rgba(0,255,255,.05);
+padding:25px;
+margin-top:25px;
+border-radius:15px;
+transition:.4s;
+border-left:5px solid cyan;
+
+}
+
+article:hover{
+
+transform:translateY(-10px);
+box-shadow:0 0 30px rgba(0,255,255,.4);
+
+}
+
+article h3{
+
+color:#6be8ff;
+
+}
+
+/* ===========================
+   Form
+=========================== */
+
+form{
+
+margin-top:25px;
+
+}
+
+input,
+textarea{
+
+width:100%;
+padding:15px;
+margin-top:8px;
+margin-bottom:20px;
+background:#0d2135;
+border:none;
+border-radius:10px;
+color:white;
+font-size:16px;
+
+}
+
+input:focus,
+textarea:focus{
+
+outline:none;
+box-shadow:0 0 15px cyan;
+
+}
+
+button{
+
+padding:15px 40px;
+background:cyan;
+color:#07121f;
+font-weight:bold;
+border:none;
+border-radius:50px;
+cursor:pointer;
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:translateY(-3px);
+box-shadow:0 0 20px cyan;
+
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+footer{
+
+text-align:center;
+padding:35px;
+background:#05101a;
+margin-top:80px;
+font-size:.95rem;
+color:#bdefff;
+
+}
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#081521;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:cyan;
+border-radius:10px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+header h1{
+
+font-size:2.3rem;
+
+}
+
+nav ul{
+
+flex-direction:column;
+gap:15px;
+
+}
+
+section{
+
+padding:25px;
+
+}
+
+img{
+
+width:170px;
+height:170px;
+
+}
+
+}
