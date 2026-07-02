@@ -64,77 +64,7 @@ const speciesData = {
 
         source: "Smithsonian Human Origins Program"
 
-    }
-
-};
-
-/* ===========================================
-   FUNGSI MEMBUKA POPUP
-=========================================== */
-
-function openPopup(speciesKey){
-
-    const species = speciesData[speciesKey];
-
-    if(!species) return;
-
-    popupBody.innerHTML = `
-
-        <img
-            src="${species.image}"
-            alt="${species.name}"
-            class="popup-image">
-
-        <h2>${species.name}</h2>
-
-        <p><strong>Julukan :</strong> ${species.nickname}</p>
-
-        <p><strong>Usia :</strong> ${species.age}</p>
-
-        <p><strong>Lokasi :</strong> ${species.location}</p>
-
-        <p><strong>Tinggi :</strong> ${species.height}</p>
-
-        <p><strong>Berat :</strong> ${species.weight}</p>
-
-        <p><strong>Volume Otak :</strong> ${species.brain}</p>
-
-        <hr>
-
-        <h3>Karakteristik</h3>
-
-        <p>${species.characteristic}</p>
-
-        <h3>Perilaku</h3>
-
-        <p>${species.behavior}</p>
-
-        <h3>Hubungan Evolusi</h3>
-
-        <p>${species.evolution}</p>
-
-        <h3>Fakta Menarik</h3>
-
-        <ul>
-
-            ${species.facts.map(fact => `<li>${fact}</li>`).join("")}
-
-        </ul>
-
-        <hr>
-
-        <small>
-
-            Sumber: ${species.source}
-
-        </small>
-
-    `;
-
-    popup.style.display = "flex";
-
-    }
-
+    },
     "homo-habilis": {
 
         name: "Homo habilis",
@@ -350,7 +280,75 @@ function openPopup(speciesKey){
 
     }
 
+
 };
+
+/* ===========================================
+   FUNGSI MEMBUKA POPUP
+=========================================== */
+
+function openPopup(speciesKey){
+
+    const species = speciesData[speciesKey];
+
+    if(!species) return;
+
+    popupBody.innerHTML = `
+
+        <img
+            src="${species.image}"
+            alt="${species.name}"
+            class="popup-image">
+
+        <h2>${species.name}</h2>
+
+        <p><strong>Julukan :</strong> ${species.nickname}</p>
+
+        <p><strong>Usia :</strong> ${species.age}</p>
+
+        <p><strong>Lokasi :</strong> ${species.location}</p>
+
+        <p><strong>Tinggi :</strong> ${species.height}</p>
+
+        <p><strong>Berat :</strong> ${species.weight}</p>
+
+        <p><strong>Volume Otak :</strong> ${species.brain}</p>
+
+        <hr>
+
+        <h3>Karakteristik</h3>
+
+        <p>${species.characteristic}</p>
+
+        <h3>Perilaku</h3>
+
+        <p>${species.behavior}</p>
+
+        <h3>Hubungan Evolusi</h3>
+
+        <p>${species.evolution}</p>
+
+        <h3>Fakta Menarik</h3>
+
+        <ul>
+
+            ${species.facts.map(fact => `<li>${fact}</li>`).join("")}
+
+        </ul>
+
+        <hr>
+
+        <small>
+
+            Sumber: ${species.source}
+
+        </small>
+
+    `;
+
+    popup.style.display = "flex";
+
+    };
 
 /* ===========================================
    FUNGSI POPUP
